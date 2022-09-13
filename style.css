@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-top: #293241;
+    --bg: #BFD7E4;
+    --orange: #F67669;
+    --orange-hover: #f65d4c;
+    --white: #FFFFFF;
+    --text-color: #4E4958;
+    --span: #C1BCCC;
+    --span-hover: #86828f;
+    --title-color: #253B51;
+    --bg-border: #FAFAFC;
+    --border: #E6E6F0;
+    --title: "Staatliches";
+    --text: "Poppins";
+}
+
+body {
+    background: var(--bg);
+    font-family: var(--text);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+body::before {
+    content: "";
+    background: var(--bg-top);
+    width: 100%;
+    height: 465px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.header {
+    text-align: center;
+    margin: 107px 0 17px 0;
+}
+
+.featured-title {
+    font-family:  var(--title);
+    font-size: 36px;
+    line-height: 45px;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.page {
+    width: 750px;
+    margin: auto;
+}
+
+fieldset {
+    border: none;
+}
+
+.form {
+    background: var(--white);
+    border-radius: 0 0 20px 20px;
+    min-height: 300px;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 392px;
+}
+
+.legend-white {
+    background: var(--orange);
+    height: 133px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+
+.legend-text {
+    font-family: var(--title);
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--white);
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-container {
+    display: flex;
+}
+
+.input-container> div:nth-child(2) {
+    margin-left: 22px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    color: var(--text-color);
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.input-wrapper span {
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--span);
+}
+
+span:hover {
+    color: var(--span-hover);
+}
+
+.input-wrapper input, 
+.input-wrapper textarea, 
+.input-wrapper select {
+    background: var(--bg-border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    height: 55px;
+    padding: 0 24px;
+    width: 100%;
+    font-family: var(--text);
+    color: var(--text-color);
+}
+
+.side-input {
+    width: 300px;
+}
+
+.fieldset-wrapper legend {
+    font-family: var(--title);
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+}
+
+.fieldset-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 24px top 50%;
+}
+
+.fieldset-wrapper textarea {
+    height: 166px;
+    padding: 2px;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+ }
+
+ .checkbox-wrapper label::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(230, 230, 240, 1);
+    border-radius: 8px;
+    display: block;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_601_20)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_601_20'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+}
+
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black;
+}
+
+.date-container {
+    display: flex;
+    gap: 10px;
+}
+
+.date-container> div:nth-child(1) {
+    width: 100%;
+    margin-right: 32px;
+}
+
+.button {
+    background: var(--orange);
+    height: 51px;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--title);
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--white);
+    margin-top: 43px;
+} 
+
+.button:hover {
+    background: var(--orange-hover);
+}
